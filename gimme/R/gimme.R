@@ -1019,7 +1019,6 @@ addind <- function (done,
       empty.mi            <- ifelse(nrow(singular) == 0, TRUE, FALSE)
       converge            <- lavInspect(fit, "converged")
       check.error         <- any(grepl("error", class(singular)) == TRUE)
-      if (check.error == TRUE) empty.mi = TRUE
       if (converge == FALSE){
         check.fit <- FALSE
       } else if (converge == TRUE){
