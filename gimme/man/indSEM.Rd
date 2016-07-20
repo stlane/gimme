@@ -26,6 +26,7 @@ indicates comma delimited.}
 \item{header}{Logical. Indicate TRUE for data files with a header.}
 
 \item{ar}{Logical. If TRUE, begins search for individual models with autoregressive (AR) paths open.
+Defaults to TRUE.}
 
 \item{plot}{Logical. If TRUE, graphs depicting relations among variables of interest will automatically be
 created. Defaults to TRUE. For individual-level plots, red paths represent positive weights and blue paths represent negative weights.}
