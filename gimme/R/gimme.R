@@ -964,23 +964,13 @@ addind <- function (done,
       check.singular      <- any(grepl("singular",singular) == TRUE)
       empty.mi            <- ifelse(nrow(singular) == 0, TRUE, FALSE)
       converge            <- lavInspect(fit, "converged")
-<<<<<<< HEAD
-      check.error         <- any(grepl("error", class(singular)) == TRUE)
-      if (check.error == TRUE) empty.mi = TRUE
-      check.fit           <- any(is.na(fitMeasures(fit,c("chisq","df","pvalue","rmsea","srmr",
-                                                         "nnfi","cfi"))))
-      
-=======
       check.error         <- any(grepl("error",class(singular))==TRUE)
-      
       if (converge == FALSE){
         check.fit <- FALSE
       } else if (converge == TRUE){
         check.fit <- any(is.na(fitMeasures(fit,c("chisq","df","pvalue","rmsea",
                                                  "srmr","nnfi","cfi"))))
       }
-
->>>>>>> refs/remotes/GatesLab/master
     } else {
       check.singular <- TRUE
       converge       <- FALSE
@@ -1028,22 +1018,14 @@ addind <- function (done,
       check.singular      <- any(grepl("singular", singular) == TRUE)
       empty.mi            <- ifelse(nrow(singular) == 0, TRUE, FALSE)
       converge            <- lavInspect(fit, "converged")
-<<<<<<< HEAD
       check.error         <- any(grepl("error", class(singular)) == TRUE)
       if (check.error == TRUE) empty.mi = TRUE
-      check.fit           <- any(is.na(fitMeasures(fit, c("chisq","df","pvalue",
-                                                          "rmsea","srmr", "nnfi","cfi"))))
-=======
-      check.error         <- any(grepl("error",class(singular))==TRUE)
-    
       if (converge == FALSE){
         check.fit <- FALSE
       } else if (converge == TRUE){
         check.fit <- any(is.na(fitMeasures(fit,c("chisq","df","pvalue","rmsea",
                                                  "srmr","nnfi","cfi"))))
       }
-      
->>>>>>> refs/remotes/GatesLab/master
     } else {
       check.singular <- TRUE
       converge       <- FALSE
